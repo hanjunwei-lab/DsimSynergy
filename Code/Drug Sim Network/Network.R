@@ -1,3 +1,5 @@
+library(dplyr)
+library(tidyr)
 drug_target <- read.csv("Data/drug_target_9606.csv")
 drug_target <- drug_target[which(drug_target$gene_name!=""),]
 drug_target <- drug_target[,c(1,7)]
