@@ -9,7 +9,14 @@ Comprehensive benchmarking on multiple independent datasets demonstrates that **
 </p>
 Figure 1: Overall architecture of DSimSynergy
 
-## 3.Installation
+## 3.Overview
+The repository is organised as follows:<br>
+- `Code/Data` contains data files and data processing files;
+- `Code/Drug Sim Network` contains code for constructing the drug similarity network;
+- `Code/Model Classification` contains different modules of **DSimSynergy** classification model;
+- `Code/Model Regression` contains different modules of **DSimSynergy** regression model;
+
+## 4.Installation
 **DSimSynergy** relies on R (version 4.3.1) and Python (version 3.12.9) environments.<br>
 - Install the necessary R packages for **DSimSynergy**:<br>
 ```sh
