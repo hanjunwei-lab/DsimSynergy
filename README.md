@@ -14,12 +14,12 @@ The repository is organised as follows:<br>
 - `Code/Data` contains data files and data processing files;
 - `Code/Drug Sim Network` contains code for constructing the drug similarity network;
 - `Code/Model Classification` contains different modules of **DSimSynergy** classification model;
-- `Code/Model Regression` contains different modules of **DSimSynergy** regression model;
+- `Code/Model Regression` contains different modules of **DSimSynergy** regression model.
 
 ## 4.Installation
 **DSimSynergy** relies on R (version 4.3.1) and Python (version 3.12.9) environments.<br>
 - Install the necessary R packages for **DSimSynergy**:<br>
-```sh
+```
 install.packages("tidyr")
 install.packages ("dplyr")
 ```
@@ -40,3 +40,10 @@ pip install -r requirements.txt
 | shap            | 0.47.2                  |
 | matplotlib      | 2.10.0                  |
 | seaborn         | 0.13.2                  |
+
+## 5.Model Training
+
+Run the following commands to train **DSimSynergy**.<br> 
+``` 
+python main.py
+```
