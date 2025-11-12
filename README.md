@@ -41,9 +41,33 @@ pip install -r requirements.txt
 | matplotlib      | 2.10.0                  |
 | seaborn         | 0.13.2                  |
 
-## 5.Model Training
+## 5.Usage
+The implemention of **DSimSynergy** framework is divided into two main parts:<br>
+- **Part I:** Construct two drug similarity networks through biological processes and ATC codes.<br>
+- **Part Ⅱ:** The complete deep learning training phase of **DSimSynergy**.<br>
+### 5.1.Implemention of Part I
+**1. Code** The code used to implement **Part I** is in the file `DSimSynergy_deal.R`,which located at folder `Code/Drug Sim Network`.This file encompasses the original data processing, construct two drug similarity networks.<br>
+**2. Data** The datasets used to implement **Part I** are located at folder `Code/Drug Sim Network/Data`
+| File                      | Description                                                                         |
+|:--------------------------|:------------------------|
+| cell_Line.csv             | The correspondence between cell line names and COSMIC ID in the DrugCombDB database.|
+| drug_atc.csv              | Information on the ACT code of drugs.                                               |
+| drug_smiles.csv           | Information on the smiles coding of drugs.                                          |
+| drug_target_9606.csv      | Information on the targets coding of drugs.                                         |
+| drugcombdb_drug to db.csv | The correspondence between DrugcombDB drug names and Drugbank ID.                   |
+| drugcombs_scored.csv      | The Loewe value of the DrugCombDB triplet.                                          |
+| Gosets_BP.csv             | Gene Set for Biological Processes.                                                  |
+| landmaker_info.txt        | L1000 Landmark Genes.                                                               |
+| Model.csv                 | Cell Line Name and ID Mapping Relationships.                                        |
+| OmicsExpressionProteinCodingGenesTPMLogp1.csv  | Gene Expression Values of Cell Lines.                          |
 
+### 5.2.Implemention of Part Ⅱ
+**1. Code** The complete training code for **DSimSynergy** is in the file `main.py` which located at folder `Code/Model Classification` and `Code/Model Regression`<br>
 Run the following commands to train **DSimSynergy**.<br> 
 ``` 
 python main.py
 ```
+**2. Data** The datasets used to train **DSimSynergy** are located at folder `Data/`
+- `Code/Data/TRAIN` contains training set data;
+- `Code/Data/DRUGCOOMB` contains external test set data of DrugComb;
+- `Code/Data/AZ_DREAM` contains external test set data of AZ_DREAM;
